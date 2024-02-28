@@ -1,0 +1,25 @@
+@use "./mixins" as *;
+@use "./typograhy" as *;
+@use "./variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  background-color: transparent;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+html,
+body {
+  min-height: 100dvh;
+  width: 100dvw;
+}
+
+ul {
+  list-style: none;
+}

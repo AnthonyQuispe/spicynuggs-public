@@ -1,0 +1,57 @@
+@use "./typograhy" as *;
+@use "./variables" as *;
+
+@mixin Tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin Desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin Four-k {
+  @media screen and (min-width: 2560px) {
+    @content;
+  }
+}
+
+@mixin Title {
+  font-family: Jellee;
+  font-size: 2rem;
+
+  @include Desktop {
+    font-size: 3rem;
+  }
+
+  @include Four-k {
+    font-size: 4rem;
+  }
+}
+
+@mixin SubHeader {
+  font-family: Jellee;
+  font-size: 1.5rem;
+
+  @include Desktop {
+    font-size: 2rem;
+  }
+  @include Four-k {
+    font-size: 3rem;
+  }
+}
+
+@mixin Body {
+  font-family: Jua;
+  font-size: 1rem;
+
+  @include Desktop {
+    font-size: 1.5rem;
+  }
+  @include Four-k {
+    font-size: 2.5rem;
+  }
+}
