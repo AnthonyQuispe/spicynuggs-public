@@ -8,18 +8,31 @@ import HamburgMenu from "../../assets/Hamburg-Menu.svg";
 import FavIcon from "../../assets/FavIcon.svg";
 import UserIcon from "../../assets/UserIcon.svg";
 import CartIcon from "../../assets/CartIcon.svg";
+import HamburgerMenu from "../HamburgMenu/HamburgMenu";
+import { useState } from "react";
 
 function Nav() {
+  const [HamburgerMenuComponent, setHamburgerMenuComponent] = useState(false);
+
+  const toggleMenu = () => {
+    setHamburgerMenuComponent(!HamburgerMenuComponent);
+  };
+
   return (
     <nav className="nav">
       <div className="nav__container nav__container--left">
-        <button className="nav__button">
+        <button className="nav__button" onClick={toggleMenu}>
           <Image
             src={HamburgMenu}
             alt="Hamburg Menu"
             className="nav__button-image"
           />
         </button>
+        {HamburgerMenuComponent && (
+          <HamburgerMenu
+            setHamburgerMenuComponent={setHamburgerMenuComponent}
+          />
+        )}
         <Image src={Logo} alt="Logo" className="nav__logo" />
         <form className="nav__searchbar">
           <input className="nav__searchbar-input" placeholder="Enter Text" />

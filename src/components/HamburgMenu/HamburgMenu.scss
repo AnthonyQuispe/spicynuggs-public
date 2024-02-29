@@ -1,0 +1,69 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typograhy" as *;
+
+.hamburger {
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s ease, visibility 0s;
+  background-color: hsla(0, 0%, 7%, 0.36);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 320px;
+    height: 100dvh;
+    background-color: $White;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 20px;
+    position: absolute;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+
+    &__logo {
+      width: 100%;
+      height: 25%;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 250px;
+    }
+
+    &__link {
+      color: $Burnt-Sienna;
+      @include SubHeader;
+      font-family: Jua;
+    }
+
+    &__button {
+      background-color: transparent;
+      border: none;
+      position: absolute;
+      right: 5%;
+      top: 1%;
+    }
+
+    &__image {
+      width: 30px;
+      height: 30px;
+      &-container {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 30px;
+      }
+    }
+  }
+}
