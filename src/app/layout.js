@@ -1,3 +1,6 @@
+import "../styles/partials/_global.scss";
+import Nav from "@/components/Nav/Nav";
+
 export const metadata = {
   title: "SpicyNuggs - Your One-Stop Shop for Cool Cute Products",
   description:
@@ -8,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <header className="header"></header>
+        <Nav />
         {children}
       </body>
     </html>

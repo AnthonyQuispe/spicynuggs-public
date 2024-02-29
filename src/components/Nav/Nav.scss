@@ -1,0 +1,133 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typograhy" as *;
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  gap: 10px;
+  height: 60px;
+  background-color: $White;
+
+  &__button {
+    border: none;
+    background-color: $White;
+    height: 39px;
+    width: 39px;
+
+    @include Desktop {
+      display: none;
+    }
+  }
+
+  &__logo {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+
+    @include Desktop {
+      position: unset;
+      transform: unset;
+      margin: unset;
+    }
+  }
+
+  &__searchbar {
+    display: none;
+
+    @include Desktop {
+      display: block;
+    }
+  }
+  &__container {
+    @include Desktop {
+      width: 33%;
+      gap: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--left {
+      @include Desktop {
+        justify-content: flex-start;
+      }
+    }
+    &--center {
+      display: none;
+
+      @include Desktop {
+        display: flex;
+        gap: 30px;
+      }
+    }
+
+    &--right {
+      display: none;
+
+      @include Desktop {
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+      }
+    }
+  }
+
+  &__searchbar {
+    display: none;
+    @include Desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 220px;
+      height: 32px;
+      flex-shrink: 0;
+      padding: 0 3px 0 14px;
+      border-radius: 30px;
+      border: 1px solid $Dusty-Rose;
+      background: $White;
+    }
+
+    &-input {
+      outline: none;
+      height: 100%;
+      padding: 3px 5px 3px 10px;
+      width: 70%;
+      border: none;
+      color: $Rose;
+      font-family: Jua;
+      font-size: 1rem;
+
+      &::placeholder {
+        color: $Dusty-Rose;
+        font-family: Jua;
+        font-size: 1rem;
+        font-style: normal;
+      }
+    }
+
+    &-button {
+      border: none;
+      flex-shrink: 0;
+      border-radius: 30px;
+      background: $Oasis;
+      color: $Burnt-Sienna;
+      font-family: Jua;
+      font-size: 1rem;
+      padding: 5px;
+    }
+  }
+
+  &__link {
+    font-family: Jua;
+    font-size: 1rem;
+    color: $Burnt-Sienna;
+  }
+}
