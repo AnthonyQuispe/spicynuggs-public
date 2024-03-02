@@ -1,5 +1,6 @@
 import "../styles/partials/_global.scss";
 import Nav from "@/components/Nav/Nav";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
   title: "SpicyNuggs - Your One-Stop Shop for Cool Cute Products",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );
