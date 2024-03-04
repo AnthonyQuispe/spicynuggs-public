@@ -1,0 +1,114 @@
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typograhy" as *;
+
+.landing-page {
+  &__hero {
+    padding: 10px 10px 0 10px;
+    min-height: 508px;
+    height: 159dvw;
+    width: 100%;
+    background-image: url("../assets/backgrounds/Hero-background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include Desktop {
+      background-color: $Oasis;
+      background-image: none;
+      min-height: 605px;
+      height: unset;
+      padding: 20px 0px 20px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-left-container {
+      @include Desktop {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &-logo {
+      width: 78%;
+      height: 30%;
+
+      @include Desktop {
+        width: 89%;
+        height: 23%;
+        transform: rotate(-7deg);
+      }
+    }
+    &-stickers {
+      width: 62%;
+      height: auto;
+
+      &-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        @include Desktop {
+          display: none;
+        }
+      }
+    }
+    &-text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 64%;
+
+      @include Desktop {
+        min-width: 530px;
+        min-height: 350px;
+        background-image: url("../assets/backgrounds/Hero-text-Background.svg");
+        gap: 50px;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 4% 0;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      @include Four-k {
+        min-height: 540px;
+      }
+    }
+    &-title {
+      @include SubHeader;
+      color: $Burnt-Sienna;
+      text-align: center;
+      line-height: 100%;
+      width: 100%;
+
+      @include Desktop {
+      }
+    }
+    &-button {
+      background-color: $White;
+      border: none;
+      border-radius: 15px;
+      padding: 20px 25px;
+      color: $Rose;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+      @include Body;
+      font-family: Jellee;
+    }
+    &-image {
+      display: none;
+      @include Desktop {
+        display: flex;
+        min-height: 500px;
+        min-width: 400px;
+        width: 40%;
+        height: auto;
+      }
+    }
+  }
+}
