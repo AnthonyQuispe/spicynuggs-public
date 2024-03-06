@@ -3,6 +3,7 @@ import "./Landingpage.scss";
 import Logo from "../assets/logo/Spicynuggs-Logo.svg";
 import HeroImage from "../../public/assets/HeroStickerImage.png";
 import HeroStickers from "../../public/assets/stickers/Hero-Stickers.svg";
+import SentIcon from "../assets/SentIcon.svg";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -10,6 +11,8 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const [activeCardIndex, setActiveCardIndex] = useState(0);
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
 
   // Sample card data (you might have an array of cards in actual use)
   const cards = [
@@ -43,6 +46,36 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const NewsLetterCollectionRef = collection(db, "NewsLetterSubscribers");
+
+      // Check if the email already exists in the collection
+      const querySnapshot = await getDocs(
+        query(NewsLetterCollectionRef, where("email", "==", email))
+      );
+
+      if (querySnapshot.size > 0) {
+        // Email already exists, handle accordingly (e.g., display an error message)
+        console.error("Email already exists in the collection");
+        window.alert("Email already subscribed");
+      } else {
+        // Email does not exist, add a new document
+        await addDoc(NewsLetterCollectionRef, {
+          email: email,
+          timestamp: serverTimestamp(),
+        });
+
+        setSubscribed(true);
+      }
+    } catch (error) {
+      console.error("Error submitting email to Firestore:", error);
+      window.alert("Unable to subscribe to NewsLetter");
+    }
+  };
 
   return (
     <main className="landing-page">
@@ -114,6 +147,83 @@ export default function Home() {
             />
           ))}
         </div>
+      </section>
+      <section className="subscription">
+        <div className="subscription__container">
+          <h2 className="subscription__container-title">Want Monthly Gifts?</h2>
+          <p className="subscription__container-text">
+            Join my patreon and get access to monthly exclusive gifts such as
+            stickers, digital downloads, and prints
+          </p>
+          <button className="subscription__container-button">Join Now</button>
+        </div>
+      </section>
+      <section className="about">
+        <div className="about__header">
+          <h2 className="about__title">About US</h2>
+          <h2 className="about__title about__title--alt">
+            A little about our Products
+          </h2>
+          <img
+            src={"/assets/PumpkinImg.png"}
+            className="about__image"
+            alt="PumpkinImg"
+          />
+        </div>
+        <div className="about__containers">
+          <div className="about__container">
+            <h3 className="about__subheader">
+              Support a local small business{" "}
+            </h3>
+            <p className="about__text">
+              All our products are produced in South Florida{" "}
+            </p>
+          </div>
+          <div className="about__container">
+            <h3 className="about__subheader">Team of One, Created by hand</h3>
+            <p className="about__text">
+              Every sticker in our collection is meticulously created by hand,
+              ensuring the utmost attention to detail and quality.
+            </p>
+          </div>
+          <div className="about__container">
+            <h3 className="about__subheader">Eco friendly packaging</h3>
+            <p className="about__text">
+              Our stickers are produced with sustainability in mind, using
+              earth-friendly materials.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="news-letter">
+        <h2 className="news-letter__title">
+          {subscribed ? "Subscribed To newsletter" : "JOIN OUR NEWSLETTER"}
+        </h2>
+        <p className="news-letter__text">
+          {subscribed
+            ? "Successfully !"
+            : "Sign up to stay updated with shop updates, discounts, new products and, more !"}
+        </p>
+        {!subscribed && (
+          <form className="news-letter__form" onSubmit={handleSubmit}>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="news-letter__form-input"
+              placeholder="Email Address"
+              required
+            />
+            <button type="submit" className="news-letter__form-button">
+              <Image
+                className="news-letter__form-image"
+                src={SentIcon}
+                alt="send icon"
+              />
+            </button>
+          </form>
+        )}
       </section>
     </main>
   );
