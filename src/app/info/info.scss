@@ -1,0 +1,47 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typograhy" as *;
+
+.info {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include Desktop {
+    padding: 100px;
+  }
+
+  &__container {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include Desktop {
+      align-items: flex-start;
+    }
+  }
+
+  &__shipping-title {
+    color: $Dusty-Rose;
+    @include Title;
+  }
+
+  &__shipping-description {
+    color: $Rose;
+    text-align: left;
+    @include Body;
+  }
+
+  &__terms-title {
+    color: $Dusty-Rose;
+    @include Title;
+  }
+
+  &__terms-description {
+    color: $Rose;
+    text-align: left;
+    @include Body;
+  }
+}
