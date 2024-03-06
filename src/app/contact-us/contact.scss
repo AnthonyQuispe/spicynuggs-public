@@ -1,0 +1,196 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typograhy" as *;
+
+.contact {
+  background-color: #ffdac8;
+  padding-top: 10px;
+
+  @include Desktop {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+  }
+
+  &__content {
+    width: 100%;
+    background-color: $White;
+    display: flex;
+    border-radius: 30px 30px 0px 0px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+
+    @include Desktop {
+      max-width: 1220px;
+      width: 95%;
+      flex-direction: row;
+      min-height: 850px;
+      height: 65dvh;
+      max-height: 950px;
+      align-items: unset;
+      padding: 20px;
+      border-radius: 30px;
+    }
+  }
+  &__title {
+    color: $Dusty-Rose;
+    text-align: center;
+    @include Title;
+
+    @include Desktop {
+      text-align: left;
+    }
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include Desktop {
+      width: 50%;
+    }
+
+    &-top {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__description {
+    display: none;
+    color: $Dusty-Rose;
+
+    @include Body;
+    @include Desktop {
+      display: block;
+      text-align: left;
+      width: 81%;
+    }
+
+    &--alt {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    display: none;
+    width: 40%;
+    height: auto;
+
+    @include Desktop {
+      display: block;
+    }
+
+    &--alt {
+      display: block;
+    }
+  }
+
+  &__form {
+    max-width: 300px;
+    min-height: 320px;
+    width: 90%;
+    border-radius: 30px;
+    background: $Oasis;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-evenly;
+
+    @include Desktop {
+      max-width: unset;
+      width: 50%;
+    }
+  }
+  &__name-inputs {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 60px;
+  }
+  &__input {
+    width: 90%;
+    border-radius: 20px;
+    background: $White;
+    border: none;
+    padding: 10px;
+    height: 60px;
+
+    @include Body;
+
+    &::placeholder {
+      color: $Rose;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--firstName {
+      width: 45%;
+      height: 60px;
+    }
+    &--lastName {
+      width: 45%;
+      height: 60px;
+    }
+  }
+
+  &__textarea {
+    height: 100px;
+    width: 90%;
+    flex-shrink: 0;
+    padding: 10px;
+    border-radius: 1.25rem;
+    border: none;
+    background: $White;
+    resize: none;
+    @include Body;
+
+    &::placeholder {
+      color: $Rose;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @include Desktop {
+      height: 300px;
+    }
+  }
+
+  &__button {
+    background-color: $White;
+    color: $Rose;
+    padding: 10px;
+    border-radius: 20px;
+    @include SubHeader;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+    @include Desktop {
+      padding: 20px 40px;
+    }
+
+    &-container {
+      width: 90%;
+    }
+  }
+
+  &__bottom-container {
+    max-width: 300px;
+    display: flex;
+    width: 90%;
+
+    @include Desktop {
+      display: none;
+    }
+  }
+}
