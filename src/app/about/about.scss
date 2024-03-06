@@ -1,0 +1,101 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typograhy" as *;
+
+.about {
+  background-image: url("../../assets/backgrounds/Background-Image-About.svg");
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+  justify-content: center;
+
+  @include Desktop {
+    height: 100dvh;
+  }
+
+  &__title {
+    color: $Dusty-Rose;
+    text-align: center;
+    @include Title;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include Desktop {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__artist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+
+    @include Desktop {
+      max-width: 800px;
+    }
+  }
+
+  &__artist-title {
+    color: $Dusty-Rose;
+    @include SubHeader;
+  }
+
+  &__artist-description {
+    color: $Burnt-Sienna;
+    text-align: center;
+    max-width: 500px;
+    @include Body;
+
+    @include Four-k {
+      max-width: 1000px;
+    }
+  }
+
+  &__how-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+
+    @include Desktop {
+      max-width: 800px;
+    }
+  }
+
+  &__how-title {
+    color: $Dusty-Rose;
+    @include SubHeader;
+  }
+  &__how-description {
+    color: $Burnt-Sienna;
+    text-align: center;
+    max-width: 500px;
+    @include Body;
+
+    @include Four-k {
+      max-width: 1000px;
+    }
+  }
+
+  &__img {
+    width: 90%;
+    height: 100%;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background-color: $White;
+  }
+}
