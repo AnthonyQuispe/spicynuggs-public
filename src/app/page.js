@@ -1,13 +1,17 @@
 "use client";
 import "./Landingpage.scss";
+import Image from "next/image";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 import Logo from "../assets/logo/Spicynuggs-Logo.svg";
 import HeroImage from "../../public/assets/HeroStickerImage.png";
 import HeroStickers from "../../public/assets/stickers/Hero-Stickers.svg";
 import SentIcon from "../assets/SentIcon.svg";
 
-import Image from "next/image";
-import Link from "next/link";
-import { useState, useEffect } from "react";
+import Sticker1 from "../assets/stickers/Sticker1.svg";
+import Sticker2 from "../assets/stickers/Sticker2.svg";
+import Sticker3 from "../assets/stickers/Sticker3.svg";
+import Footage from "../assets/Footage.svg";
 
 export default function Home() {
   const [activeCardIndex, setActiveCardIndex] = useState(0);
@@ -224,6 +228,38 @@ export default function Home() {
             </button>
           </form>
         )}
+      </section>
+      <section className="social-section">
+        <div className="social-section__containers social-section__containers--alt">
+          <h2 className="social-section__subheader">
+            Want Some Exclusive Footage of The Process Behind SpicyNuggs
+          </h2>
+          <Image
+            src={Footage}
+            className="social-section__image social-section__image--alt "
+            alt="Footage"
+          />
+        </div>
+        <div className="social-section__containers">
+          <h2 className="social-section__title">We're on instagram</h2>
+          <div className="social-section__containers--images">
+            <Image
+              className="social-section__image"
+              src={Sticker1}
+              alt="Social Sticker"
+            />
+            <Image
+              className="social-section__image"
+              src={Sticker2}
+              alt="Social Sticker"
+            />
+            <Image
+              className="social-section__image"
+              src={Sticker3}
+              alt="Social Sticker"
+            />
+          </div>
+        </div>
       </section>
     </main>
   );
