@@ -22,8 +22,8 @@ export default function LoginPage() {
           Forgot Password?
         </Link>
         <button className="login-page__button">Sign In</button>
-        <GoogleButton />
-        <Link className="login-page__link" href={"/"}>
+        <GoogleButton buttonText="Sign In with Google" />
+        <Link className="login-page__link" href={"/signup"}>
           Don't have an account ?
           <span className="login-page__link--rose"> Sign up</span>
         </Link>
