@@ -234,11 +234,17 @@ export default function Home() {
           <h2 className="social-section__subheader">
             Want Some Exclusive Footage of The Process Behind SpicyNuggs
           </h2>
-          <Image
-            src={Footage}
+          <iframe
             className="social-section__image social-section__image--alt "
-            alt="Footage"
-          />
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Pern2Za3LuE?si=djDfqgeJ7x6LQKhW"
+            title="YouTube video player"
+            poster={Footage}
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
         <div className="social-section__containers">
           <h2 className="social-section__title">We're on instagram</h2>
