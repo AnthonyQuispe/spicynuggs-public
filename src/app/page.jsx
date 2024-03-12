@@ -249,21 +249,36 @@ export default function Home() {
         <div className="social-section__containers">
           <h2 className="social-section__title">We're on instagram</h2>
           <div className="social-section__containers--images">
-            <Image
-              className="social-section__image"
-              src={Sticker1}
-              alt="Social Sticker"
-            />
-            <Image
-              className="social-section__image"
-              src={Sticker2}
-              alt="Social Sticker"
-            />
-            <Image
-              className="social-section__image"
-              src={Sticker3}
-              alt="Social Sticker"
-            />
+            <Link
+              href="https://www.instagram.com/spicynuggsx/"
+              className="social-section__link"
+            >
+              <Image
+                className="social-section__image"
+                src={Sticker1}
+                alt="Social Sticker"
+              />
+            </Link>
+            <Link
+              href="https://www.instagram.com/spicynuggsx/"
+              className="social-section__link"
+            >
+              <Image
+                className="social-section__image"
+                src={Sticker2}
+                alt="Social Sticker"
+              />
+            </Link>
+            <Link
+              href="https://www.instagram.com/spicynuggsx/"
+              className="social-section__link"
+            >
+              <Image
+                className="social-section__image"
+                src={Sticker3}
+                alt="Social Sticker"
+              />
+            </Link>
           </div>
         </div>
       </section>

@@ -1,0 +1,39 @@
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typograhy" as *;
+
+.not-found {
+  height: 95dvh;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &__title {
+    @include Title;
+    color: $Rose;
+    text-align: center;
+  }
+
+  &__link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__logo {
+    width: 280px;
+    height: auto;
+
+    @include Desktop {
+      width: 400px;
+    }
+  }
+
+  &__description {
+    @include SubHeader;
+    color: $Dusty-Rose;
+    font-family: Jua;
+    text-align: center;
+  }
+}

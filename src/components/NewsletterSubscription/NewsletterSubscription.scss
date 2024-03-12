@@ -1,0 +1,47 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typograhy" as *;
+
+.subscription-button {
+  width: 270px;
+  height: 65px;
+  background-color: $White;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px 10px 10px 20px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+
+  @include Desktop {
+    width: 400px;
+  }
+
+  &__input {
+    @include Body;
+    font-family: Jellee;
+    color: $Rose;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      @include Body;
+      font-family: Jellee;
+      color: $Rose;
+      text-transform: uppercase;
+    }
+  }
+
+  &__button {
+    background-color: $Dusty-Rose;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+
+    &-img {
+      height: 35px;
+      width: 30px;
+    }
+  }
+}
