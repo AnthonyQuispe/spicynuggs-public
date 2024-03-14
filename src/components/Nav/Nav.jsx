@@ -33,7 +33,9 @@ function Nav() {
             setHamburgerMenuComponent={setHamburgerMenuComponent}
           />
         )}
-        <Image src={Logo} alt="Logo" className="nav__logo" />
+        <Link href="/">
+          <Image src={Logo} alt="Logo" className="nav__logo" />
+        </Link>
         <form className="nav__searchbar">
           <input className="nav__searchbar-input" placeholder="Enter Text" />
           <button className="nav__searchbar-button">Search</button>

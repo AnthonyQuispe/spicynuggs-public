@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Logo from "../assets/logo/Spicynuggs-Logo.svg";
 import HeroImage from "../../public/assets/HeroStickerImage.png";
 import HeroStickers from "../../public/assets/stickers/Hero-Stickers.svg";
-import SentIcon from "../assets/SentIcon.svg";
+import NewsletterSubscription from "@/components/NewsletterSubscription/NewsletterSubscription";
 
 import Sticker1 from "../assets/stickers/Sticker1.svg";
 import Sticker2 from "../assets/stickers/Sticker2.svg";
@@ -209,25 +209,7 @@ export default function Home() {
             ? "Successfully !"
             : "Sign up to stay updated with shop updates, discounts, new products and, more !"}
         </p>
-        {!subscribed && (
-          <form className="news-letter__form" onSubmit={handleSubmit}>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="news-letter__form-input"
-              placeholder="Email Address"
-              required
-            />
-            <button type="submit" className="news-letter__form-button">
-              <Image
-                className="news-letter__form-image"
-                src={SentIcon}
-                alt="send icon"
-              />
-            </button>
-          </form>
-        )}
+        {!subscribed && <NewsletterSubscription />}
       </section>
       <section className="social-section">
         <div className="social-section__containers social-section__containers--alt">

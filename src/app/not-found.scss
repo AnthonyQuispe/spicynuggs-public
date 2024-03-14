@@ -3,12 +3,17 @@
 @use "../styles/partials/typograhy" as *;
 
 .not-found {
-  height: 95dvh;
+  height: 100dvh;
   width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  position: absolute;
+  background: $White;
+  top: 0;
+  height: 100dvh;
 
   &__title {
     @include Title;
