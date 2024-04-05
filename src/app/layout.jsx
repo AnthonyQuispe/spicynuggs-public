@@ -1,6 +1,6 @@
 import "../styles/partials/_global.scss";
-import Nav from "@/components/Nav/Nav";
-import Footer from "@/components/Footer/Footer";
+import Nav from "../components/Nav/Nav";
+import Footer from "../components/Footer/Footer";
 import Maintenance from "./maintenance/page";
 import { redirect } from "next/navigation";
 

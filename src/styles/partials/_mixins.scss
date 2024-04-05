@@ -1,6 +1,12 @@
 @use "./typograhy" as *;
 @use "./variables" as *;
 
+@mixin Mobile-L {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}
+
 @mixin Tablet {
   @media screen and (min-width: 768px) {
     @content;

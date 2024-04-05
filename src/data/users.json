@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "john_doe",
+      "email": "john.doe@example.com",
+      "password": "hashed_password",
+      "firstName": "John",
+      "lastName": "Doe",
+      "address": {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "NY",
+        "zipcode": "12345",
+        "country": "USA"
+      },
+      "orders": [
+        {
+          "orderId": "ABC123",
+          "date": "2024-02-13",
+          "total": "$50.99",
+          "items": [
+            {
+              "productId": 1,
+              "name": "White t-shirt",
+              "price": "$5.99",
+              "quantity": 2
+            },
+            {
+              "productId": 2,
+              "name": "Blue pants",
+              "price": "$1.99",
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "wishlist": [
+        {
+          "productId": 3,
+          "name": "Pink hat",
+          "price": "$10.99"
+        },
+        {
+          "productId": 5,
+          "name": "Black sunglasses",
+          "price": "$120.99"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "jane_smith",
+      "email": "jane.smith@example.com",
+      "password": "hashed_password",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "address": {
+        "street": "456 Oak Ave",
+        "city": "Smallville",
+        "state": "CA",
+        "zipcode": "98765",
+        "country": "USA"
+      },
+      "orders": [],
+      "wishlist": [
+        {
+          "productId": 1,
+          "name": "White t-shirt",
+          "price": "$5.99"
+        },
+        {
+          "productId": 4,
+          "name": "Yellow sticker",
+          "price": "$50.99"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "username": "amy_wong",
+      "email": "amy.wong@example.com",
+      "password": "hashed_password",
+      "firstName": "Amy",
+      "lastName": "Wong",
+      "address": {
+        "street": "789 Elm St",
+        "city": "Metropolis",
+        "state": "TX",
+        "zipcode": "54321",
+        "country": "USA"
+      },
+      "orders": [],
+      "wishlist": [
+        {
+          "productId": 2,
+          "name": "Blue pants",
+          "price": "$1.99"
+        },
+        {
+          "productId": 6,
+          "name": "Red sticker",
+          "price": "$0"
+        }
+      ]
+    }
+  ]
+}

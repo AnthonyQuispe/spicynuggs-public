@@ -2,7 +2,7 @@
 import "./maintenance.scss";
 import Image from "next/image";
 import Link from "next/link";
-import NewsletterSubscription from "@/components/NewsletterSubscription/NewsletterSubscription";
+import NewsletterSubscription from "../../components/NewsletterSubscription/NewsletterSubscription";
 import Logo from "../../assets/logo/Spicynuggs-Logo.svg";
 
 export default function Maintenance() {

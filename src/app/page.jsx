@@ -1,12 +1,12 @@
 "use client";
-import "./Landingpage.scss";
+import "./landingpage.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Logo from "../assets/logo/Spicynuggs-Logo.svg";
 import HeroImage from "../../public/assets/HeroStickerImage.png";
 import HeroStickers from "../../public/assets/stickers/Hero-Stickers.svg";
-import NewsletterSubscription from "@/components/NewsletterSubscription/NewsletterSubscription";
+import NewsletterSubscription from "../components/NewsletterSubscription/NewsletterSubscription";
 
 import Sticker1 from "../assets/stickers/Sticker1.svg";
 import Sticker2 from "../assets/stickers/Sticker2.svg";

@@ -87,13 +87,14 @@
   &__searchbar {
     display: none;
     @include Desktop {
+      overflow: hidden;
       display: flex;
       justify-content: space-between;
       align-items: center;
       max-width: 220px;
       height: 32px;
       flex-shrink: 0;
-      padding: 0 3px 0 14px;
+      padding: 0 0 0 10px;
       border-radius: 30px;
       border: 1px solid $Dusty-Rose;
       background: $White;
@@ -102,7 +103,7 @@
     &-input {
       outline: none;
       height: 100%;
-      padding: 3px 5px 3px 10px;
+      padding: 3px 5px 3px 0;
       width: 70%;
       border: none;
       color: $Rose;

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "White t-shirt",
+    "price": "$5.99",
+    "category": "shirts",
+    "color": "White",
+    "size": "S",
+    "description": "A classic white t-shirt: timeless, versatile, and essential for any wardrobe.",
+    "image": "..."
+  },
+  {
+    "id": 2,
+    "title": "Blue pants",
+    "price": "$1.99",
+    "category": "pants",
+    "color": "Blue",
+    "size": "L",
+    "description": "Stylish blue pants: versatile, comfortable, and perfect for any occasion.",
+    "image": "..."
+  },
+  {
+    "id": 3,
+    "title": "Pink hat",
+    "price": "$10.99",
+    "category": "hats",
+    "color": "Pink",
+    "size": "M",
+    "description": "A chic pink hat: playful, fashionable, and sure to make a statement.",
+    "image": "..."
+  },
+  {
+    "id": 4,
+    "title": "Yellow Sticker",
+    "price": "$50.99",
+    "category": "misc.",
+    "color": "Yellow",
+    "size": "S",
+    "description": "Bright yellow sticker: eye-catching, adhesive, perfect for reminders or decoration.",
+    "image": "..."
+  },
+  {
+    "id": 5,
+    "title": "Black Sunglasses",
+    "price": "$120.99",
+    "category": "misc.",
+    "color": "Black",
+    "size": "L",
+    "description": "Sleek black sunglasses: timeless, stylish, essential for sunny days.",
+    "image": "..."
+  },
+  {
+    "id": 6,
+    "title": "Red Sticker",
+    "price": "$0",
+    "category": "misc.",
+    "color": "Red",
+    "size": "M",
+    "description": "Vibrant red sticker: attention-grabbing, adhesive, ideal for labeling or decorating.",
+    "image": "..."
+  }
+]
